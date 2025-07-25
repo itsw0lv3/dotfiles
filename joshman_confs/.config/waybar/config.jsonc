@@ -1,0 +1,127 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"spacing": 4,
+	"modules-left": [
+		"cpu",
+		"memory",
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"clock",
+	],
+	"modules-right": [
+		"idle_inhibitor",
+		"pulseaudio",
+		"network",
+		"backlight",
+		"battery",
+		"power-profiles-daemon",
+		"tray"
+	],
+	"backlight": {
+	// "device": "acpi_video1",
+	"format": "{percent}% {icon}",
+	"format-icons": ["", "", "", "", "", "", "", "", ""]
+	},
+	"battery": {
+		"states": {
+	    // "good": 95,
+	    "warning": 30,
+	    "critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-full": "{capacity}% {icon}",
+		"format-charging": "{capacity}% ",
+		"format-plugged": "{capacity}% ",
+		"format-alt": "{time} {icon}",
+	// "format-good": "", // An empty format will hide the module
+	// "format-full": "",
+	"format-icons": ["", "", "", "", ""]
+	},
+	"clock": {
+	// "timezone": "America/New_York",
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format-alt": "{:%Y-%m-%d}"
+	},
+	"cpu": {
+		"format": "{usage}% ",
+		"tooltip": false
+	},
+	"hyprland/workspaces": {
+		"active-only": false,
+		"persistent-workspaces": {},
+		"disable-scroll": false,
+		"all-outputs": true,
+		"warp-on-scroll": false,
+		// "on-scroll-up": "hyprctl dispatch workspace e+1",
+		// "on-scroll-down": "hyprctl dispatch workspace e-1",
+		"format": "{name} {icon}",
+		"format-icons": {
+	   		 "urgent": "",
+	   		 "active": "",
+	   		 "default": ""
+		}
+	},
+	"hyprland/window": {
+		"max-length": 30,
+		"separate-outputs": true
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"memory": {
+		"format": "{}% "
+	},
+	"network": {
+		"format-wifi": "({signalStrength}%) ",
+		"format-ethernet": "{ipaddr}/{cidr} ",
+		"tooltip-format": "{essid} via {gwaddr} ",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "Disconnected ⚠",
+		"format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
+	},
+	"power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+	"pulseaudio": {
+	"format": "{volume}% {icon}",
+	//"format": "{volume}% {icon} {format_source}",
+	"format-bluetooth": "{volume}% {icon} {format_source}",
+	"format-bluetooth-muted": " {icon} {format_source}",
+	"format-muted": " {format_source}",
+	// "format-source": "{volume}% ",
+	// "format-source-muted": "",
+	"format-icons": {
+		"headphone": "",
+		"hands-free": "",
+		"headset": "",
+		"phone": "",
+		"portable": "",
+		"car": "",
+		"default": ["", "", ""]
+	},
+	"on-click": "pavucontrol"
+	},
+	"tray": {
+	// "icon-size": 21,
+	"spacing": 10
+	// "icons": {
+		// 	"steam": "$HOME/.icons/Zafiro-Icons-Dark/apps/scalable/steam.svg"
+		// }
+	}
+}
