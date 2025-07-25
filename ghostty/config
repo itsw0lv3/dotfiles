@@ -26,6 +26,8 @@ copy-on-select = true
 cursor-style = block_hollow
 cursor-style-blink = true
 
+confirm-close-surface = false
+
 shell-integration-features = no-cursor
 # window-padding-x = 2
 #
