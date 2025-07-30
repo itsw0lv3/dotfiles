@@ -20,6 +20,13 @@ boot.kernelParams = [
 ];
 
 extraPackages = with pkgs; [
+  neovim
+  git
+  curl
+  wget
+  firefox
   mesa.drivers
   mesa.opencl     # rusticl - often more stable than ROCm on mobile
+  adwaita-icon-theme
+  gnome.gnome-themes-extra  # includes Adwaita cursors
 ];
