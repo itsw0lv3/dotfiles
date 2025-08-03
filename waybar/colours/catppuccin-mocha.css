@@ -1,0 +1,62 @@
+/* Catppuccin Mocha Color Scheme */
+:root {
+  /* Background colors */
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #313244;
+  --bg-tertiary: #45475a;
+  --bg-hover: #585b70;
+  --bg-active: #6c7086;
+
+  /* Foreground colors */
+  --fg-primary: #cdd6f4;
+  --fg-secondary: #bac2de;
+  --fg-tertiary: #a6adc8;
+  --fg-dim: #9399b2;
+
+  /* Accent colors */
+  --accent-red: #f38ba8;
+  --accent-green: #a6e3a1;
+  --accent-yellow: #f9e2af;
+  --accent-blue: #89b4fa;
+  --accent-purple: #cba6f7;
+  --accent-aqua: #94e2d5;
+  --accent-orange: #fab387;
+
+  /* Status colors */
+  --status-error: #f38ba8;
+  --status-warning: #f9e2af;
+  --status-success: #a6e3a1;
+  --status-info: #89b4fa;
+
+  /* UI element colors */
+  --border: #45475a;
+  --border-focus: #f9e2af;
+  --shadow: #11111b;
+  
+  /* Module specific colors */
+  --module-bg: var(--bg-secondary);
+  --module-fg: var(--fg-primary);
+  --module-border: var(--border);
+  
+  /* Workspace colors */
+  --workspace-active: var(--accent-blue);
+  --workspace-inactive: var(--fg-dim);
+  --workspace-urgent: var(--accent-red);
+  
+  /* Battery colors */
+  --battery-critical: var(--accent-red);
+  --battery-low: var(--accent-orange);
+  --battery-medium: var(--accent-yellow);
+  --battery-high: var(--accent-green);
+  
+  /* Network colors */
+  --network-connected: var(--accent-green);
+  --network-disconnected: var(--accent-red);
+  --network-limited: var(--accent-yellow);
+  
+  /* Audio colors */
+  --audio-high: var(--accent-green);
+  --audio-medium: var(--accent-yellow);
+  --audio-low: var(--accent-orange);
+  --audio-muted: var(--accent-red);
+}

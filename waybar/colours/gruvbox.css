@@ -1,0 +1,62 @@
+/* Gruvbox Medium Dark Color Scheme */
+:root {
+  /* Background colors */
+  --bg-primary: #282828;
+  --bg-secondary: #3c3836;
+  --bg-tertiary: #504945;
+  --bg-hover: #665c54;
+  --bg-active: #7c6f64;
+
+  /* Foreground colors */
+  --fg-primary: #ebdbb2;
+  --fg-secondary: #d5c4a1;
+  --fg-tertiary: #bdae93;
+  --fg-dim: #a89984;
+
+  /* Accent colors */
+  --accent-red: #fb4934;
+  --accent-green: #b8bb26;
+  --accent-yellow: #fabd2f;
+  --accent-blue: #83a598;
+  --accent-purple: #d3869b;
+  --accent-aqua: #8ec07c;
+  --accent-orange: #fe8019;
+
+  /* Status colors */
+  --status-error: #fb4934;
+  --status-warning: #fabd2f;
+  --status-success: #b8bb26;
+  --status-info: #83a598;
+
+  /* UI element colors */
+  --border: #504945;
+  --border-focus: #d79921;
+  --shadow: #1d2021;
+  
+  /* Module specific colors */
+  --module-bg: var(--bg-secondary);
+  --module-fg: var(--fg-primary);
+  --module-border: var(--border);
+  
+  /* Workspace colors */
+  --workspace-active: var(--accent-blue);
+  --workspace-inactive: var(--fg-dim);
+  --workspace-urgent: var(--accent-red);
+  
+  /* Battery colors */
+  --battery-critical: var(--accent-red);
+  --battery-low: var(--accent-orange);
+  --battery-medium: var(--accent-yellow);
+  --battery-high: var(--accent-green);
+  
+  /* Network colors */
+  --network-connected: var(--accent-green);
+  --network-disconnected: var(--accent-red);
+  --network-limited: var(--accent-yellow);
+  
+  /* Audio colors */
+  --audio-high: var(--accent-green);
+  --audio-medium: var(--accent-yellow);
+  --audio-low: var(--accent-orange);
+  --audio-muted: var(--accent-red);
+}
