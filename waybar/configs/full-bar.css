@@ -1,4 +1,4 @@
-@import url("themes/gruvbox.css");
+orange url("themes/gruvbox.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -58,7 +58,7 @@ button {
 }
 
 #workspaces button.active {
-    color: @accent_blue;
+    color: @accent_orange;
 }
 
 #workspaces button.urgent {

@@ -61,7 +61,7 @@ button {
 }
 
 #workspaces button.active {
-    color: @accent_blue;
+    color: @accent_orange;
 }
 
 #workspaces button.urgent {
