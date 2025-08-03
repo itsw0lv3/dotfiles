@@ -1,0 +1,23 @@
+/* Simple Dark Color Scheme */
+
+/* Background colors */
+@define-color bg_primary #1a1a1a;
+@define-color bg_secondary #2d2d2d;
+@define-color bg_tertiary #404040;
+@define-color bg_hover #4d4d4d;
+@define-color bg_active #5a5a5a;
+
+/* Foreground colors */
+@define-color fg_primary #ffffff;
+@define-color fg_secondary #e6e6e6;
+@define-color fg_tertiary #cccccc;
+@define-color fg_dim #999999;
+
+/* Accent colors */
+@define-color accent_red #ff5555;
+@define-color accent_green #50fa7b;
+@define-color accent_yellow #f1fa8c;
+@define-color accent_blue #8be9fd;
+@define-color accent_purple #bd93f9;
+@define-color accent_aqua #66d9ef;
+@define-color accent_orange #ffb86c;
