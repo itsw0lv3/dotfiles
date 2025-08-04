@@ -14,6 +14,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+setopt CORRECT
 
 #
 # Example aliases
