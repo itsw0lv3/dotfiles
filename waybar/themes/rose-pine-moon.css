@@ -1,0 +1,21 @@
+/* Background colors */
+@define-color bg_primary #232136;    /* Rose Pine Moon base */
+@define-color bg_secondary #2a273f;  /* Rose Pine Moon surface */
+@define-color bg_tertiary #393552;   /* Rose Pine Moon overlay */
+@define-color bg_hover #44415a;      /* Slightly lighter overlay */
+@define-color bg_active #56526e;     /* Active state */
+
+/* Foreground colors */
+@define-color fg_primary #e0def4;    /* Rose Pine Moon text */
+@define-color fg_secondary #c4a7e7;  /* Rose Pine Moon iris (subtle highlight) */
+@define-color fg_tertiary #908caa;   /* Rose Pine Moon muted */
+@define-color fg_dim #6e6a86;        /* Rose Pine Moon subtle */
+
+/* Accent colors - Rose Pine Moon palette */
+@define-color accent_red #eb6f92;    /* Rose Pine Moon love (pink/red) */
+@define-color accent_green #31748f;  /* Rose Pine Moon pine (teal-green) */
+@define-color accent_yellow #f6c177; /* Rose Pine Moon gold */
+@define-color accent_blue #9ccfd8;   /* Rose Pine Moon foam (cyan-blue) */
+@define-color accent_purple #c4a7e7; /* Rose Pine Moon iris */
+@define-color accent_aqua #9ccfd8;   /* Rose Pine Moon foam */
+@define-color accent_orange #ea9a97; /* Rose Pine Moon rose (coral-orange) */

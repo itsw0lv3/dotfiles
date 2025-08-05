@@ -201,7 +201,7 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-    color: @accent_green;
+    color: @accent_purple;
 }
 
 /* Privacy indicators */

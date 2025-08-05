@@ -6,3 +6,5 @@ font-family = "Dejavu Mono"
 font-size = 12.0
 
 shell-integration-features = no-cursor
+theme = rose-pine-moon
+# Gruvbox not offically supported :( sadge

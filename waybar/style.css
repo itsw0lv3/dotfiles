@@ -1,4 +1,4 @@
-@import url("themes/simple-dark.css");
+@import url("themes/rose-pine-moon.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -201,7 +201,7 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-    color: @accent_green;
+    color: @accent_purple;
 }
 
 /* Privacy indicators */

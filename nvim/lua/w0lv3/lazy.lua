@@ -46,10 +46,13 @@ require("lazy").setup({
   'L3MON4D3/LuaSnip',
 
 
+  -- Util
+  'mbbill/undotree',
+
 	-- Pretty
 	{
     		'nvim-lualine/lualine.nvim',
     		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
-  {'catppuccin/nvim', name = 'catppuccin', priority = 1000 }
+  { "rose-pine/neovim", name = "rose-pine" }
 })
