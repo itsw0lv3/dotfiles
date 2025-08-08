@@ -16,7 +16,13 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 setopt CORRECT
 
-#
+# For the lols:
+psh_it() {
+    git add -A
+    git commit -m "Ah push it!"
+    git push
+}
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
