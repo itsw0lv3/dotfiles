@@ -137,10 +137,6 @@
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
     histSize = 10000;
-    ohMyZsh = {
-      enable = true;
-      plugins = ["git" "fzf" "history" "dirhistory"];
-    };
   };
   users.defaultUserShell = pkgs.zsh;
   system.userActivationScripts.zshrc = "touch .zshrc";
