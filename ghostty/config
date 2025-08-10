@@ -7,5 +7,5 @@ font-size = 13.0
 mouse-hide-while-typing = true
 
 shell-integration-features = no-cursor
-theme = rose-pine-moon
+theme = 
 # Gruvbox not offically supported :( sadge
