@@ -3,8 +3,7 @@
 # Add install yay!
 
 pkgs=(
-	# "ly"
-	"gdm"
+	"ly"
 	"zsh"
 	"btop"
 	"git"
@@ -40,10 +39,11 @@ pkgs=(
 	"tar"
 	"zip"
 	"unzip"
-	# "gvfs"
-	# "thunar"
-	# "thunar-volman"
-	"nautilus"
+	"gvfs"
+	"thunar"
+	"thunar-volman"
+	"thunar-archive-plugin"
+	"xarchiver"
 	"bluez"
 	"bluetui"
 	"man-db"
@@ -68,16 +68,16 @@ for pkg in "${pkgs[@]}"; do
 	yay -S "$pkg" --noconfirm
 done
 
-# sudo systemctl enable ly
-sudo systemctl enable gdm
+sudo systemctl enable ly
 sudo systemctl enable NetworkManager
-sudo systemctl enable gnome-keyring
 
-git clone https://github.com/itsw0lv3/dotfiles.git
+cp -r ~/dotfiles/hypr ~/.config
+cp -r ~/dotfiles/kitty ~/.config
+cp -r ~/dotfiles/waybar ~/.config
+cp -r ~/dotfiles/nvim ~/.config
+cp -r ~/dotfiles/ghosty ~/.config
+cp -r ~/dotfiles/rofi ~/.config
 
-cp -r dotfiles/hypr ~/.config
-cp -r dotfiles/kitty ~/.config
-cp -r dotfiles/waybar ~/.config
-cp -r dotfiles/nvim ~/.config
+cp ~/dotfiles/.tmux.conf ~/
 
 rm -rf dotfiles
