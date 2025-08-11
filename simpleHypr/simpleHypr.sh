@@ -3,7 +3,8 @@
 # Add install yay!
 
 pkgs=(
-	"ly"
+	# "ly"
+	"gdm"
 	"zsh"
 	"btop"
 	"git"
@@ -39,9 +40,10 @@ pkgs=(
 	"tar"
 	"zip"
 	"unzip"
-	"gvfs"
-	"thunar"
-	"thunar-volman"
+	# "gvfs"
+	# "thunar"
+	# "thunar-volman"
+	"nautilus"
 	"bluez"
 	"bluetui"
 	"man-db"
@@ -55,7 +57,10 @@ pkgs=(
 	"ttf-dejavu"
 	"ttf-devaju-nerd"
 	"otf-font-awesome"
+	"ttf-proggyclean-nerd"
 	"zen-browser-bin"
+	"gnome-keyring"
+	"seahorse"
 )
 
 
@@ -63,8 +68,10 @@ for pkg in "${pkgs[@]}"; do
 	yay -S "$pkg" --noconfirm
 done
 
-sudo systemctl enable ly
+# sudo systemctl enable ly
+sudo systemctl enable gdm
 sudo systemctl enable NetworkManager
+sudo systemctl enable gnome-keyring
 
 git clone https://github.com/itsw0lv3/dotfiles.git
 
