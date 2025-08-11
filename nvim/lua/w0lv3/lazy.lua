@@ -54,5 +54,6 @@ require("lazy").setup({
     		'nvim-lualine/lualine.nvim',
     		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
-  { "rose-pine/neovim", name = "rose-pine" }
+  { "rose-pine/neovim", name = "rose-pine" },
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...}
 })
