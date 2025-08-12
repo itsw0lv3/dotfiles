@@ -55,5 +55,12 @@ require("lazy").setup({
     		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
   { "rose-pine/neovim", name = "rose-pine" },
-  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...}
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+
+  -- Dashboard TESTING:
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  }
 })
