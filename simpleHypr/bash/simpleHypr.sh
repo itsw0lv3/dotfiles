@@ -61,6 +61,10 @@ pkgs=(
 	"zen-browser-bin"
 	"gnome-keyring"
 	"seahorse"
+	"noto-fonts-cjk"
+	"noto-fonts"
+	"noto-fonts-emoji"
+	"noto-fonts-extra"
 )
 
 
