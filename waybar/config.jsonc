@@ -84,10 +84,10 @@
 	},
 	"network": {
 		"format-wifi": "({signalStrength}%) ",
-		"format-ethernet": "{ipaddr}/{cidr} ",
-		"tooltip-format": "{essid} via {gwaddr} ",
+		"format-ethernet": " {bandwidthDownBits} - ",
+		"tooltip-format": "gateway {gwaddr} ",
 		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "Disconnected ⚠",
+		"format-disconnected": "󰈂",
 		"format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
 	},
 	"power-profiles-daemon": {

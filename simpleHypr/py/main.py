@@ -23,11 +23,21 @@ if __name__ == "__main__":
         arch_utils.install_yay()
 
     print("Installing Hyprland")
-    arch_utils.install_pkgs(hyprland_pkgs)
+    arch_utils.install_pkgs(hyprland_pkgs, "Install hyprland? I mean... ")
+    arch_utils.install_pkgs(amd_pkgs, "Install amd extra pkgs?")
+    arch_utils.install_pkgs(wine_pkgs, "Install wine extras?")
+    arch_utils.install_pkgs(gaming_pkgs, "Install gaming stuff?")
+    arch_utils.install_pkgs(dev_pkgs, "Install dev things?")
+    arch_utils.install_pkgs(general_pkgs, "Install all the general stuff?")
 
-    confirm_amd = input("Install amd extra pkgs? Y/N: ")
-    if confirm_amd.upper() == "Y":
-        arch_utils.install_pkgs(amd_pkgs)
+    install_omz = input("Install Oh My Zsh? Y/N: ")
+    if install_omz.upper() == "Y":
+        arch_utils.omz_install()
 
+    install_omz_plugins = input("Install OMZ Plugins? Y/N: ")
+    if install_omz_plugins.upper() == "Y":
+        arch_utils.omz_plugin_install()
 
-
+    use_dotfiles = input("Use dotfiles? Y/N: ")
+    if use_dotfiles.upper() == "Y":
+        arch_utils.put_dots()

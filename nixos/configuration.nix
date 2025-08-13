@@ -63,7 +63,7 @@ in
   # NETWORK & LOCALIZATION
   # ============================================================================
 
-  networking.hostName = "nixos"; # Define your hostname
+  networking.hostName = "victusOne"; # Define your hostname
   networking.networkmanager.enable = true; # Enable networking
 
   # Set your time zone
@@ -196,6 +196,11 @@ in
     wget
     curl
     git
+    tmux
+    tar
+    unzip
+    zip
+    xarchiver
     wl-clipboard
     wl-clip-persist
 
@@ -207,9 +212,11 @@ in
     rofi-wayland
     waybar
     dunst
+    pavucontrol
     hypridle
     hyprlock
     hyprpaper
+    hyprshot
     waytrogen
     wlogout
 
@@ -219,11 +226,29 @@ in
     typescript
     rustup
     go
+    python3
 
     # Applications
     vscodium
     brave
     zen-browser.packages.${pkgs.system}.default
+    mpv
+    vlc
+    inkscape
+    gimp
+    obs-studio
+    signal
+    obsidian
+    anki
+
+    # Gaming
+    steam
+    discord
+    protonup-qt
+    protontricks
+    winetricks
+    gamemode
+    gamescope
 
     # Themes & icons
     adwaita-icon-theme

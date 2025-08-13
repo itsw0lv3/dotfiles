@@ -16,8 +16,10 @@ def install_yay():
     os.system("makepkg -si")
 
 
-def install_pkgs(pkgs: str):
-    os.system(f"yay -S {pkgs} --noconfirm")
+def install_pkgs(pkgs: str, msg: str):
+    query = input(f"{msg} Y/N: ")
+    if query.upper() == "Y":
+        os.system(f"yay -S {pkgs} --noconfirm")
 
 
 def omz_install():
@@ -31,14 +33,10 @@ def omz_plugin_install():
     os.system("cp ~/dotfiles/.zshrc ~/")
 
 
-def get_dots():
-    user = get_user()
-    os.chdir(f"/home/{user}/")
-    os.system("git clone https://github.com/itsw0lv3/dotfiles.git")
-
-
 def put_dots():
     # Get user input laters
+    user = get_user()
+    os.chdir(f"/home/{user}/")
     os.system("cp -r dotfiles/nvim ~/.config/")
     os.system("cp -r dotfiles/kitty ~/.config/")
     os.system("cp -r dotfiles/hypr ~/.config/")
@@ -49,3 +47,4 @@ def put_dots():
     os.system("cp -r dotfiles/Wallpapers ~/Pictures/")
     os.system("cp dotfiles/.zshrc ~/")
     os.system("cp dotfiles/.tmux.conf ~/")
+    os.system("source .zshrc")
