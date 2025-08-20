@@ -8,9 +8,10 @@ def get_user():
 
 
 def install_yay():
+    user = get_user()
     os.system("sudo pacman -S go")
     os.system("mkdir ~/sources")
-    os.chdir("~/sources")
+    os.chdir(f"/home/{user}/sources")
     os.system("git clone https://aur.archlinux.org/yay.git")
     os.chdir("yay")
     os.system("makepkg -si")

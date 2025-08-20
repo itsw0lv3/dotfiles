@@ -28,6 +28,7 @@
 	  "wl-clip-persist",
 	  "brightnessctl",
 	  "waytrogen",
+    "dunst",
 	  "kitty",
 	  "rofi-wayland",
 	  "power-profiles-daemon",
@@ -41,6 +42,7 @@
 	  "thunar-volman",
 	  "thunar-archive-plugin",
 	  "xarchiver",
+    "galculator",
 	  "bluez",
 	  "bluetui",
 	  "man-db",
@@ -95,8 +97,9 @@
 	  "obs-studio",
 	  "obsidian",
 	  "anki-bin",
-	  "fastfecth",,
-    "signal-desktop"
+	  "fastfecth",
+    "signal-desktop",
+    "libreoffice-fresh"
   ],
   "wine": [
 	  "wine-staging",

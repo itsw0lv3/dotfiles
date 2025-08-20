@@ -41,3 +41,17 @@ if __name__ == "__main__":
     use_dotfiles = input("Use dotfiles? Y/N: ")
     if use_dotfiles.upper() == "Y":
         arch_utils.put_dots()
+
+    # Update these things!
+    print("Enabling tings")
+    os.system("sudo systemctl enable ly")
+    os.system("sudo systemctl enable NetworkManager")
+
+    print("Creating themes and icons folders")
+    user = get_user()
+    os.chdir(f"/home/{user}")
+    os.system("mkdir .themes .icons")
+
+    
+
+
