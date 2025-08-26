@@ -84,8 +84,9 @@
 	},
 	"network": {
 		"format-wifi": "({signalStrength}%) ",
-		"format-ethernet": " {bandwidthDownBits} - ",
-		"tooltip-format": "gateway {gwaddr} ",
+		"format-ethernet": " {bandwidthDownBytes} - ",
+		"tooltip-format-wifi": "{essid} {gwaddr} - {ipaddr} ",
+		"tooltip-format-ethernet": "{ifname} {gwaddr} - {ipaddr} ",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰈂",
 		"format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
@@ -103,7 +104,6 @@
     },
 	"pulseaudio": {
 	"format": "{volume}% {icon}",
-	//"format": "{volume}% {icon} {format_source}",
 	"format-bluetooth": "{volume}% {icon} {format_source}",
 	"format-bluetooth-muted": " {icon} {format_source}",
 	"format-muted": " {format_source}",
@@ -123,8 +123,5 @@
 	"tray": {
 	// "icon-size": 21,
 	"spacing": 10
-	// "icons": {
-		// 	"steam": "$HOME/.icons/Zafiro-Icons-Dark/apps/scalable/steam.svg"
-		// }
 	}
 }
