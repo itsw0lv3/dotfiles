@@ -19,7 +19,7 @@ def install_yay():
 
 def install_pkgs(pkgs: str, msg: str):
     query = input(f"{msg} Y/N: ")
-    if query.upper() == "Y":
+    if query.upper() == "Y" or query == "":
         os.system(f"yay -S {pkgs} --noconfirm")
 
 
