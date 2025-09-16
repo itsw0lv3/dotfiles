@@ -19,7 +19,7 @@ wine_pkgs = " ".join(pkgs["wine"])
 
 if __name__ == "__main__":
     confirm_yay = input("Install yay? Y/N: ")
-    if confirm_yay.upper() == "Y":
+    if confirm_yay.upper() == "Y" or confirm_yay == "":
         print("Installing yay:")
         arch_utils.install_yay()
 
@@ -32,15 +32,15 @@ if __name__ == "__main__":
     arch_utils.install_pkgs(general_pkgs, "Install all the general stuff?")
 
     install_omz = input("Install Oh My Zsh? Y/N: ")
-    if install_omz.upper() == "Y":
+    if install_omz.upper() == "Y" or install_omz == "":
         arch_utils.omz_install()
 
     install_omz_plugins = input("Install OMZ Plugins? Y/N: ")
-    if install_omz_plugins.upper() == "Y":
+    if install_omz_plugins.upper() == "Y" or install_omz_plugins == "":
         arch_utils.omz_plugin_install()
 
     use_dotfiles = input("Use dotfiles? Y/N: ")
-    if use_dotfiles.upper() == "Y":
+    if use_dotfiles.upper() == "Y" or use_dotfiles == "":
         arch_utils.put_dots()
 
     # Update these things!
