@@ -1,3 +1,4 @@
+import os
 import json
 import arch_utils
 
@@ -48,7 +49,7 @@ if __name__ == "__main__":
     os.system("sudo systemctl enable NetworkManager")
 
     print("Creating themes and icons folders")
-    user = get_user()
+    user = arch_utils.get_user()
     os.chdir(f"/home/{user}")
     os.system("mkdir .themes .icons")
 
