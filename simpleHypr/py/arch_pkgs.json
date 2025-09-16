@@ -99,7 +99,8 @@
 	  "anki-bin",
 	  "fastfecth",
     "signal-desktop",
-    "libreoffice-fresh"
+    "brave-bin",
+	  "spotify"
   ],
   "wine": [
 	  "wine-staging",
