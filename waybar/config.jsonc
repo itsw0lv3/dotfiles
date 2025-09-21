@@ -7,18 +7,18 @@
 		"hyprland/workspaces",
 		"hyprland/window"
 	],
-	"modules-center": [
-		"clock",
-	],
+	//"modules-center": [
+	//],
 	"modules-right": [
-		"idle_inhibitor",
-		"pulseaudio",
-    "bluetooth",
+		"tray",
+    //"bluetooth",
 		"network",
+		"pulseaudio",
 		"backlight",
 		"battery",
 		"power-profiles-daemon",
-		"tray"
+		"idle_inhibitor",
+		"clock"
 	],
 	"backlight": {
 	// "device": "acpi_video1",
@@ -83,13 +83,14 @@
 		"format": "{}% "
 	},
 	"network": {
-		"format-wifi": "({signalStrength}%) ",
-		"format-ethernet": " {bandwidthDownBytes} - ",
+		// "format-wifi": "({signalStrength}%) ",
+		// "format-ethernet": " {bandwidthDownBytes} - ",
 		"tooltip-format-wifi": "{essid} {gwaddr} - {ipaddr} ",
 		"tooltip-format-ethernet": "{ifname} {gwaddr} - {ipaddr} ",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰈂",
-		"format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
+		//"format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
+		"format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits} "
 	},
 	"power-profiles-daemon": {
       "format": "{icon}",
