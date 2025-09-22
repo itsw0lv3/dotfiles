@@ -72,7 +72,7 @@
 	  "nodejs",
 	  "npm",
 	  "typescript",
-	  "vscodium-bin",
+    "jdk-openjdk",
 	  "tmux"
   ],
   "gaming": [
@@ -95,8 +95,8 @@
 	  "anki-bin",
 	  "fastfecth",
     "signal-desktop",
-    "brave-bin",
-	  "spotify"
+	  "spotify",
+    "qbittorrent"
   ],
   "wine": [
 	  "wine-staging",
