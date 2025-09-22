@@ -30,6 +30,7 @@
 	  "rofi-wayland",
 	  "power-profiles-daemon",
 	  "networkmanager",
+    "network-manager-applet",
 	  "openssh",
 	  "tar",
 	  "zip",
