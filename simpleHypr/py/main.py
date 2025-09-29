@@ -18,18 +18,18 @@ wine_pkgs = " ".join(pkgs["wine"])
 
 
 if __name__ == "__main__":
-    confirm_yay = input("Install yay? Y/N: ")
-    if confirm_yay.upper() == "Y" or confirm_yay == "":
-        print("Installing yay:")
-        arch_utils.install_yay()
+    # confirm_yay = input("Install yay? Y/N: ")
+    # if confirm_yay.upper() == "Y" or confirm_yay == "":
+    #     print("Installing yay:")
+    #     arch_utils.install_yay()
 
-    print("Installing Hyprland")
-    arch_utils.install_pkgs(hyprland_pkgs, "Install hyprland? I mean... ")
-    arch_utils.install_pkgs(amd_pkgs, "Install amd extra pkgs?")
-    arch_utils.install_pkgs(wine_pkgs, "Install wine extras?")
-    arch_utils.install_pkgs(gaming_pkgs, "Install gaming stuff?")
-    arch_utils.install_pkgs(dev_pkgs, "Install dev things?")
-    arch_utils.install_pkgs(general_pkgs, "Install all the general stuff?")
+    # print("Installing Hyprland")
+    # arch_utils.install_pkgs(hyprland_pkgs, "Install hyprland? I mean... ")
+    # arch_utils.install_pkgs(amd_pkgs, "Install amd extra pkgs?")
+    # arch_utils.install_pkgs(wine_pkgs, "Install wine extras?")
+    # arch_utils.install_pkgs(gaming_pkgs, "Install gaming stuff?")
+    # arch_utils.install_pkgs(dev_pkgs, "Install dev things?")
+    # arch_utils.install_pkgs(general_pkgs, "Install all the general stuff?")
 
     install_omz = input("Install Oh My Zsh? Y/N: ")
     if install_omz.upper() == "Y" or install_omz == "":
@@ -44,14 +44,14 @@ if __name__ == "__main__":
         arch_utils.put_dots()
 
     # Update these things!
-    print("Enabling tings")
-    os.system("sudo systemctl enable ly")
-    os.system("sudo systemctl enable NetworkManager")
+    # print("Enabling tings")
+    # os.system("sudo systemctl enable ly")
+    # os.system("sudo systemctl enable NetworkManager")
 
-    print("Creating themes and icons folders")
-    user = arch_utils.get_user()
-    os.chdir(f"/home/{user}")
-    os.system("mkdir .themes .icons")
+    # print("Creating themes and icons folders")
+    # user = arch_utils.get_user()
+    # os.chdir(f"/home/{user}")
+    # os.system("mkdir .themes .icons")
 
     
 
