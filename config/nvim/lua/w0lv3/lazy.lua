@@ -56,6 +56,7 @@ require("lazy").setup({
 	},
   { "rose-pine/neovim", name = "rose-pine" },
   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+  { "neanias/everforest-nvim", name ="everforst" },
 
   -- Dashboard TESTING:
   {
