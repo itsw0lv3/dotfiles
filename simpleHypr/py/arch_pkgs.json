@@ -39,18 +39,19 @@
 		"mousepad",
 		"evince",
 		"ristretto",
-		"ttf-dejavu",
-		"ttf-devaju-nerd",
-		"otf-font-awesome",
-		"ttf-proggyclean-nerd",
-		"brave-bin",
 		"gnome-keyring",
-		"seahorse",
+		"seahorse"
+	],
+  "fonts": [
 		"noto-fonts-cjk",
 		"noto-fonts",
 		"noto-fonts-emoji",
 		"noto-fonts-extra"
-	],
+		"ttf-dejavu",
+		"ttf-devaju-nerd",
+		"otf-font-awesome",
+		"ttf-proggyclean-nerd"
+  ],
 	"amd_driver": [
 		"lib32-mesa",
 		"vulkan-radeon",
@@ -87,6 +88,7 @@
 	],
 	"general": [
 		"gimp",
+		"brave-bin",
 		"inkscape",
 		"mpv",
 		"vlc",
