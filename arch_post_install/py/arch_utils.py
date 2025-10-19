@@ -34,6 +34,7 @@ def omz_plugin_install():
     os.system("cp ~/dotfiles/.zshrc ~/")
 
 
+# Update this to set if is WM or DE
 def put_dots():
     # Get user input laters
     user = get_user()
