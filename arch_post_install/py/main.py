@@ -93,6 +93,7 @@ def create_pkgs_str(pkg_cat: str, pkgs_master: dict):
 
 if __name__ == "__main__":
     user = get_user()
+    # Change base path!
     BASE_PATH = f"/home/{user}"
 
     with open(f"{BASE_PATH}/dotfiles/arch_post_install/py/arch_pkgs.json", "r") as f_pkgs:
