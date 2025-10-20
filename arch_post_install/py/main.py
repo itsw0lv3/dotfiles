@@ -62,6 +62,29 @@ def put_default_dots(env: str):
             os.system("cp -r dotfiles/waytrogen ~/.config/")
 
 
+def user_form():
+    user = get_user()
+    wanted_pkgs = []
+    user_confirmed = False
+    with open(f"/home/{user}/dotfiles/arch_post_install/py/arch_pkgs.json", "r") as f_pkgs:
+        pkgs = json.load(f_pkgs)
+
+    while not user_confirmed:
+        for item in pkgs.keys():
+            add_item = input(f"Do you want to install '{item}' pkgs? Y/N: ")
+            if add_item.upper() == "Y":
+                wanted_pkgs.append(item)
+            else:
+                continue
+
+        print(wanted_pkgs)
+        user_confirms = input("Are these the pkgs to install Y = yes, N = start again. Y/N: ")
+        if user_confirms.upper() == "Y":
+            user_confirmed = True
+        else:
+            os.system("clear")
+
+
 if __name__ == "__main__":
     user = get_user()
     BASE_PATH = f"/home/{user}"
@@ -69,6 +92,7 @@ if __name__ == "__main__":
     with open(f"{BASE_PATH}/dotfiles/arch_post_install/py/arch_pkgs.json", "r") as f_pkgs:
         pkgs = json.load(f_pkgs)
 
+    # Maybe make this a function that will input the key from list?
     hyprland_pkgs = " ".join(pkgs["hyprland"])
     fonts = " ".join(pkgs["font"])
     amd_pkgs = " ".join(pkgs["amd_driver"])
