@@ -53,7 +53,7 @@ def put_default_dots(env: str):
 
     match env:
         case "KDE":
-            os.system(f"cp -r dotfiles/config/konsole/* .local/share/konsole/")
+            os.system("cp -r dotfiles/config/konsole/* .local/share/konsole/")
         case "Hypr":
             os.system("cp -r dotfiles/kitty ~/.config/")
             os.system("cp -r dotfiles/hypr ~/.config/")
