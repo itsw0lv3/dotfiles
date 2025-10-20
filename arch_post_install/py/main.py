@@ -28,7 +28,7 @@ def install_yay():
 
 
 def install_pkgs(pkg_manager: str, pkgs: str, flag: str = ""):
-    os.system("{pkg_manager} {pkgs} {flag}")
+    os.system(f"{pkg_manager} {pkgs} {flag}")
 
 
 def omz_install():
@@ -84,6 +84,12 @@ def user_form():
         else:
             os.system("clear")
 
+    return wanted_pkgs
+
+
+def create_pkgs_str(pkg_cat: str, pkgs_master: dict):
+    return " ".join(pkgs_master[pkg_cat])
+
 
 if __name__ == "__main__":
     user = get_user()
@@ -93,6 +99,7 @@ if __name__ == "__main__":
         pkgs = json.load(f_pkgs)
 
     # Maybe make this a function that will input the key from list?
+    # Replace from test.py!
     hyprland_pkgs = " ".join(pkgs["hyprland"])
     fonts = " ".join(pkgs["font"])
     amd_pkgs = " ".join(pkgs["amd_driver"])
