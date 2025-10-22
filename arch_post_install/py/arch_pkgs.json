@@ -64,7 +64,7 @@
 		"npm",
 		"typescript",
 		"jdk-openjdk",
-    "python3-pip",
+    "jupyter-notebook",
 		"zsh",
 		"btop",
 		"curl",
