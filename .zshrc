@@ -11,6 +11,9 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	zsh-z
+	# New Extras
+	python
+	golang
 )
 
 source $ZSH/oh-my-zsh.sh
