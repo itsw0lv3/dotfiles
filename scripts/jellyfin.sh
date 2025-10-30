@@ -24,3 +24,15 @@ sudo systemctl restart jellyfin.service
 
 # Test it
 sudo -u jellyfin ls /run/media/$USER/Backups/Media/Video
+
+# HTTPS port (if you set up SSL)
+sudo firewall-cmd --permanent --add-port=8920/tcp
+
+# Service discovery (for auto-detection by apps)
+sudo firewall-cmd --permanent --add-port=7359/udp
+
+# DLNA (for casting to TVs/devices)
+sudo firewall-cmd --permanent --add-port=1900/udp
+
+# Reload
+sudo firewall-cmd --reload
