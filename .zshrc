@@ -11,7 +11,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	zsh-z
-	# New Extras
+	emacs
 	python
 	golang
 )
@@ -29,8 +29,13 @@ psh_it() {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias :q=exit
+alias bpy=bpython
+alias docker="sudo docker"
+alias jf_st="sh jf.sh"
+alias jf_sp="sudo systemctl stop jellyfin.service"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
-
+export PATH="$HOME/.cargo/bin:$PATH"

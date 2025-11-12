@@ -55,7 +55,6 @@ require("lazy").setup({
     		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
   { "rose-pine/neovim", name = "rose-pine" },
-  { "neanias/everforest-nvim", name ="everforst" },
 
   -- Dashboard TESTING:
   {
