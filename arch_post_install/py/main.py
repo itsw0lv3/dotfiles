@@ -47,6 +47,7 @@ def omz_plugin_install():
 def put_default_dots(env: str):
     user = get_user()
     os.chdir(f"/home/{user}/")
+    # Put usual dots
     os.system("cp -r dotfilesc/config/nvim ~/.config/")
     os.system("cp dotfiles/config/.zshrc ~/")
     os.system("cp dotfiles/config/.tmux.conf ~/")
@@ -101,10 +102,27 @@ if __name__ == "__main__":
 
     # Maybe make this a function that will input the key from list?
     # Replace from test.py!
-    hyprland_pkgs = " ".join(pkgs["hyprland"])
-    fonts = " ".join(pkgs["font"])
-    amd_pkgs = " ".join(pkgs["amd_driver"])
-    dev_pkgs = " ".join(pkgs["dev"])
-    gaming_pkgs = " ".join(pkgs["gaming"])
-    general_pkgs = " ".join(pkgs["general"])
-    wine_pkgs = " ".join(pkgs["wine"])
+    # hyprland_pkgs = " ".join(pkgs["hyprland"])
+    # fonts = " ".join(pkgs["font"])
+    # amd_pkgs = " ".join(pkgs["amd_driver"])
+    # dev_pkgs = " ".join(pkgs["dev"])
+    # gaming_pkgs = " ".join(pkgs["gaming"])
+    # general_pkgs = " ".join(pkgs["general"])
+    # wine_pkgs = " ".join(pkgs["wine"])
+
+    with open(f"{BASE_PATH}/dotfiles/arch_post_install/py/arch_pkgs.json", "r") as f_pkgs:
+        pkgs = json.load(f_pkgs)
+
+    pkgs_to_install = user_form()
+    for item in pkgs_to_install:
+        curr = create_pkgs_str(item, pkgs)
+        install_pkgs("sudo dnf install ", curr)
+
+    install_omz = input("Would you like to install oh-my-zsh? Y/n: ")
+    if install_omz.upper() == "Y" or install_omz == "":
+        os.system("yay -S zsh --noconfirm")
+        omz_install()
+
+    install_omz_plugs = input("Would you like to install oh-my-zsh plugins? Y/n: ")
+    if install_omz_plugs.upper() == "Y" or install_omz_plugs == "":
+        omz_plugin_install()

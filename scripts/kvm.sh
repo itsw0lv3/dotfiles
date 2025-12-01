@@ -5,7 +5,7 @@ sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils open
 # AMD virtio:
 sudo pacman -S vulkan-virtio
 
-echo "Add these to: /etc/libvirtd.conf"
+echo "Add these to: /etc/libvirt/libvirtd.conf"
 echo 'unix_sock_group = "libvirt"
 unix_sock_rw_perms = "0770"'
 
