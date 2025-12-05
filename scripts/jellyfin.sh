@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 sudo pacman -S jellyfin-server jellyfin-web jellyfin-ffmpeg
-sudo systemctl enable jellyfin.service
-sudo systemctl start jellyfin.service
+# sudo systemctl enable jellyfin.service
+# sudo systemctl start jellyfin.service
 
 # Test it
 sudo -u jellyfin ls /run/media/$USER/Backups/Media/Video
