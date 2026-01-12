@@ -12,4 +12,4 @@ unix_sock_rw_perms = "0770"'
 sudo usermod -a -G libvirt $(whoami)
 newgrp libvirt
 
-sudo systemctl enable libvirtd
+sudo systemctl enable libvirtd --now

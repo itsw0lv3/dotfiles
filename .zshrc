@@ -32,10 +32,15 @@ psh_it() {
 alias :q=exit
 alias bpy=bpython
 alias docker="sudo docker"
-alias jf_st="sh jf.sh"
-alias jf_sp="sudo systemctl stop jellyfin.service"
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# tmux autostart
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
