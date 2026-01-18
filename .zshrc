@@ -1,7 +1,8 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="fox"
+# ZSH_THEME="trapd00r"
 
 plugins=(
 	fzf
@@ -19,13 +20,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 setopt CORRECT
 
-# For the lols:
-psh_it() {
-    git add -A
-    git commit -m "Ah push it!"
-    git push
-}
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -40,7 +34,7 @@ export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # tmux autostart
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux
+# fi
 
