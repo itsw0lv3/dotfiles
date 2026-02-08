@@ -1,0 +1,23 @@
+#+title: Sway Config
+
+* Sway Config
+URL: https://github-wiki-see.page/m/swaywm/sway/wiki/Useful-add-ons-for-sway
+
+** Pkgs needed
+#+begin_src bash
+swayfx
+swaybg
+rofi
+# new needed
+swayidle
+swaylock
+swaync
+sov
+autotiling
+brightnessctl
+grim
+slurp
+waybar
+otf-font-awesome
+ttf-dejavu-nerd
+#+end_src
