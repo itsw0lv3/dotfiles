@@ -40,7 +40,6 @@ require("lazy").setup({
   'VonHeikemen/lsp-zero.nvim',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/nvim-cmp',
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
   'hrsh7th/vim-vsnip',
   'hrsh7th/vim-vsnip-integ',
   'L3MON4D3/LuaSnip',
@@ -51,10 +50,16 @@ require("lazy").setup({
 
 	-- Pretty
 	{
-    		'nvim-lualine/lualine.nvim',
-    		dependencies = { 'nvim-tree/nvim-web-devicons' }
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
   { "rose-pine/neovim", name = "rose-pine" },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 
   -- Dashboard TESTING:
   {
