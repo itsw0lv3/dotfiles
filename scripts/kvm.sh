@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
+yay -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
 
 # AMD virtio:
-sudo pacman -S vulkan-virtio
+yay -S vulkan-virtio
 
 echo "Add these to: /etc/libvirt/libvirtd.conf"
 echo 'unix_sock_group = "libvirt"
