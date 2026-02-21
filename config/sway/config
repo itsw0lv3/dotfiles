@@ -8,7 +8,7 @@
 set $mod Mod4
 # Home row direction keys, like vim
 # Your preferred terminal emulator
-set $term konsole
+set $term kitty
 # Your preferred application launcher
 # set $menu wmenu-run
 set $menu rofi -show drun
@@ -16,7 +16,7 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/w0lv3/Pictures/Wallpapers/Anime/wallhaven-jx1gz5.png fill
+# output * bg /home/w0lv3/Pictures/Wallpapers/Anime/wallhaven-jx1gz5.png fill
 #
 # Example configuration:
 #
@@ -198,10 +198,10 @@ bindsym $mod+r mode "resize"
     bindsym Print exec grim
 
 # Swayfx Rules:
-    blur enable
-    blur_passes 1
-    blur_radius 3
-    blur_noise 0
+#     blur enable
+#     blur_passes 1
+#     blur_radius 3
+#     blur_noise 0
     
     corner_radius 10
     gaps inner 10

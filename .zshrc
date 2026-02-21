@@ -1,7 +1,7 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="fox"
+ZSH_THEME="zhann"
 # ZSH_THEME="trapd00r"
 
 plugins=(
