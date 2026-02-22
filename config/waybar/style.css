@@ -1,14 +1,13 @@
-@import url("themes/gruvbox.css");
+@import url("themes/simple-dark.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Dejavu Mono;
-    font-weight: bold;
-    font-size: 15px;
+    font-family: monospace;
+    font-size: 14px;
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @bg_primary;
     color: @fg_primary;
     transition-property: background-color;
     transition-duration: .5s;
@@ -21,20 +20,16 @@ window#waybar.hidden {
 /* Module containers */
 .modules-left {
     background: @bg_primary;
-    border-radius: 0 0 10px 0;
     padding: 0 10px;
 }
 
 .modules-center {
-    background: transparent;
-    /* background: @bg_primary; */
-    border-radius: 0 0 10px 10px;
+    background: @bg_primary;
     padding: 0 10px;
 }
 
 .modules-right {
     background: @bg_primary;
-    border-radius: 0 0 0 10px;
     padding: 0 10px;
 }
 
@@ -46,21 +41,9 @@ button {
     border-radius: 0;
 }
 
-#bluetooth {
-  padding: 0 8px;
-}
-
-#bluetooth.on:hover {
-  color: @accent_blue;
-}
-
-#bluetooth.off {
-  color: @fg_dim;
-}
-
 /* Hover effects */
 #pulseaudio:hover {
-  color: @accent_yellow;
+    background-color: @bg_hover;
 }
 
 /* Workspaces */
@@ -181,17 +164,9 @@ label:focus {
     color: @fg_primary;
 }
 
-#backlight:hover {
-  color: @accent_orange;
-}
-
 /* Network states */
 #network {
     color: @fg_primary;
-}
-
-#network:hover {
-  color: @accent_purple;
 }
 
 #network.disconnected {

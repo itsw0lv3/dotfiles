@@ -1,4 +1,4 @@
-orange url("themes/gruvbox.css");
+@import url("themes/gruvbox.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
