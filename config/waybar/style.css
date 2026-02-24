@@ -57,8 +57,8 @@ button {
     color: @fg_secondary;
 }
 
-#workspaces button.active {
-    color: @accent_orange;
+#workspaces button.focused {
+    color: @accent_aqua;
 }
 
 #workspaces button.urgent {

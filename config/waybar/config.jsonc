@@ -4,11 +4,14 @@
 	"height": 30,
 	"spacing": 4,
 	"modules-left": [
-		"sway/workspaces",
+    "custom/terminal",
+    "custom/browser",
+    "custom/launcher",
 		"sway/window"
 	],
-	//"modules-center": [
-	//],
+	"modules-center": [
+		"sway/workspaces",
+	],
 	"modules-right": [
 		"tray",
     //"bluetooth",
@@ -45,10 +48,22 @@
 	  "format-off": "󰂲"
   },
 	"clock": {
-	// "timezone": "America/New_York",
-	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format-alt": "{:%Y-%m-%d}"
+	  // "timezone": "America/New_York",
+	  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	  "format-alt": "{:%Y-%m-%d}"
 	},
+  "custom/terminal": {
+    "format": " ",
+    "on-click": "kitty"
+  },
+  "custom/browser": {
+    "format": " ",
+    "on-click": "firefox"
+  },
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "rofi -show drun"
+  },
 	"cpu": {
 		"format": "{usage}% ",
 		"tooltip": false
@@ -61,7 +76,8 @@
 		"warp-on-scroll": false,
 		// "on-scroll-up": "hyprctl dispatch workspace e+1",
 		// "on-scroll-down": "hyprctl dispatch workspace e-1",
-		"format": "{name} {icon}",
+		// "format": "{name} {icon}",
+		"format": "{name}",
 		"format-icons": {
 	   		 "urgent": "",
 	   		 "active": "",
@@ -83,14 +99,15 @@
 		"format": "{}% "
 	},
 	"network": {
-		// "format-wifi": "({signalStrength}%) ",
-		// "format-ethernet": " {bandwidthDownBytes} - ",
-		"tooltip-format-wifi": "{essid} {gwaddr} - {ipaddr} ",
+		"tooltip-format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits} ",
+		"format-wifi": "{essid}: {signalStrength} ",
 		"tooltip-format-ethernet": "{ifname} {gwaddr} - {ipaddr} ",
 		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "󰈂",
+		"format-disconnected": "󰈂"
 		//"format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
-		"format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits} "
+		// "format-wifi": "({signalStrength}%) ",
+		// "format-ethernet": " {bandwidthDownBytes} - ",
+		// "tooltip-format-wifi": "{essid} {gwaddr} - {ipaddr} ",
 	},
 	"power-profiles-daemon": {
       "format": "{icon}",
