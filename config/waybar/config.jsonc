@@ -4,13 +4,13 @@
 	"height": 30,
 	"spacing": 4,
 	"modules-left": [
+		"sway/workspaces",
     "custom/terminal",
     "custom/browser",
     "custom/launcher",
 		"sway/window"
 	],
 	"modules-center": [
-		"sway/workspaces",
 	],
 	"modules-right": [
 		"tray",

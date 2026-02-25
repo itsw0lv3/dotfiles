@@ -76,6 +76,8 @@ exec swayidle -w \
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    bindsym $mod+tab exec rofi -show window
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -208,7 +210,7 @@ blur_passes 2
 blur_radius 3
 blur_noise 0
 
-corner_radius 10
+corner_radius 5
 gaps inner 10
 
 smart_borders on
