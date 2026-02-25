@@ -8,6 +8,7 @@
 
 window#waybar {
     background-color: @bg_primary;
+    opacity: 0.8;
     color: @fg_primary;
     transition-property: background-color;
     transition-duration: .5s;
@@ -32,6 +33,20 @@ window#waybar.hidden {
     background: @bg_primary;
     padding: 0 10px;
 }
+
+/* Custom Modules */
+.custom-terminal {
+  color: @accent_purple;
+}
+
+.custom-browser {
+  color: @accent_orange;
+}
+
+.custom-launcher {
+  color: @fg_primary;
+}
+
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */

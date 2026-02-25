@@ -99,8 +99,8 @@
 		"format": "{}% "
 	},
 	"network": {
-		"tooltip-format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits} ",
 		"format-wifi": "{essid}: {signalStrength} ",
+		"tooltip-format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits}  \n{gwaddr} - {ipaddr}",
 		"tooltip-format-ethernet": "{ifname} {gwaddr} - {ipaddr} ",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰈂"
