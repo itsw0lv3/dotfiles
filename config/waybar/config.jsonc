@@ -8,9 +8,9 @@
     "custom/terminal",
     "custom/browser",
     "custom/launcher",
-		"sway/window"
 	],
 	"modules-center": [
+		"sway/window"
 	],
 	"modules-right": [
 		"tray",
@@ -85,7 +85,8 @@
 		}
 	},
 	"sway/window": {
-		"max-length": 30,
+		// "max-length": 30,
+		"max-length": 50,
 		"separate-outputs": true
 	},
 	"idle_inhibitor": {
