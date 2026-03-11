@@ -1,4 +1,4 @@
-@import url("themes/simple-dark.css");
+@import url("themes/tokyonight-storm.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -35,16 +35,19 @@ window#waybar.hidden {
 }
 
 /* Custom Modules */
-.custom-terminal {
+#custom-terminal {
   color: @accent_purple;
+  padding: 0 5px;
 }
 
-.custom-browser {
+#custom-browser {
   color: @accent_orange;
+  padding: 0 5px;
 }
 
-.custom-launcher {
+#custom-launcher {
   color: @fg_primary;
+  padding: 0 5px;
 }
 
 
@@ -63,7 +66,7 @@ button {
 
 /* Workspaces */
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px;
     background-color: transparent;
     color: @fg_dim;
 }

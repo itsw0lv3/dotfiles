@@ -7,7 +7,7 @@
 		"sway/workspaces",
     "custom/terminal",
     "custom/browser",
-    "custom/launcher",
+    "custom/launcher"
 	],
 	"modules-center": [
 		"sway/window"
@@ -15,6 +15,7 @@
 	"modules-right": [
 		"tray",
     //"bluetooth",
+    "sway/scratchpad",
 		"network",
 		"pulseaudio",
 		"backlight",
@@ -58,7 +59,7 @@
   },
   "custom/browser": {
     "format": " ",
-    "on-click": "firefox"
+    "on-click": "waterfox"
   },
   "custom/launcher": {
     "format": " ",
@@ -68,19 +69,24 @@
 		"format": "{usage}% ",
 		"tooltip": false
 	},
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+	  "show-empty": false,
+	  "format-icons": ["", ""],
+	  "tooltip": true,
+	  "tooltip-format": "{app}: {title}"
+  }, 
 	"sway/workspaces": {
 		"active-only": false,
 		"persistent-workspaces": {},
 		"disable-scroll": false,
 		"all-outputs": true,
 		"warp-on-scroll": false,
-		// "on-scroll-up": "hyprctl dispatch workspace e+1",
-		// "on-scroll-down": "hyprctl dispatch workspace e-1",
 		// "format": "{name} {icon}",
 		"format": "{name}",
 		"format-icons": {
 	   		 "urgent": "",
-	   		 "active": "",
+	   		 "focused": "",
 	   		 "default": ""
 		}
 	},

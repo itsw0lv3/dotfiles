@@ -1,3 +1,4 @@
+
 configuration{
     modi: ["drun", "window", "run"];
     icon-theme: "Papirus-Dark";
@@ -26,4 +27,4 @@ configuration{
     kb-move-char-forward: "Control+f";
     kb-mode-complete: "Control+o";
 }
-@theme "/usr/share/rofi/themes/tokyonight.rasi"
+@theme "~/.config/rofi/themes/tokyonight.rasi"
