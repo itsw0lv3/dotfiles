@@ -45,6 +45,11 @@ window#waybar.hidden {
   padding: 0 5px;
 }
 
+#custom-files {
+  color: @accent_red;
+  padding: 0 5px;
+}
+
 #custom-launcher {
   color: @fg_primary;
   padding: 0 5px;

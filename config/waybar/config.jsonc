@@ -7,6 +7,7 @@
 		"sway/workspaces",
     "custom/terminal",
     "custom/browser",
+    "custom/files",
     "custom/launcher"
 	],
 	"modules-center": [
@@ -55,15 +56,23 @@
 	},
   "custom/terminal": {
     "format": " ",
+    "tooltip-format": "Terminal",
     "on-click": "kitty"
   },
   "custom/browser": {
     "format": " ",
+    "tooltip-format": "Web Broswer",
     "on-click": "waterfox"
   },
   "custom/launcher": {
     "format": " ",
+    "tooltip-format": "App Launcher",
     "on-click": "rofi -show drun"
+  },
+  "custom/files": {
+    "format": "",
+    "tooltip-format": "Files",
+    "on-click": "thunar"
   },
 	"cpu": {
 		"format": "{usage}% ",
