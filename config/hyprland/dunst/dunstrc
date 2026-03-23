@@ -1,0 +1,20 @@
+[global]
+    # TokyoNight Storm Colors
+    frame_color = "#7aa2f7"
+    separator_color = "#3b4261"
+    font = "Hack 11"
+    corner_radius = 5
+
+[urgency_low]
+    background = "#24283bE6"
+    foreground = "#a9b1d6"
+
+[urgency_normal]
+    background = "#24283bE6"
+    foreground = "#a9b1d6"
+    timeout = 10
+
+[urgency_critical]
+    background = "#24283bE6"
+    foreground = "#f7768e"
+    frame_color = "#f7768e"

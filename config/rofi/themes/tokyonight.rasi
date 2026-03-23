@@ -10,7 +10,8 @@
     hv: #9274ca; 
     primary: #C5C8C6; 
     ug: #0B2447;
-    font: "Monospace 11";
+    // font: "Monospace 11";
+    font: "Dejavu 12";
     background-color: @bg;
     //dark: @bg;
     border: 0px;

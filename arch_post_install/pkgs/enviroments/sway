@@ -1,6 +1,7 @@
 thunar
 thunar-volman
 gvfs
+gvfs-smb
 tumbler
 tumbler-extra-thumbnailers
 tumbler-folder-thumbnailer
@@ -19,8 +20,6 @@ slurp
 wl-clipboard
 wl-clip-hist
 xclip
-wob
-mywob
 brightnesssctl
 clipman
 gnome-keyring
@@ -42,3 +41,5 @@ brightnessctl
 network-manager-applet
 lightdm
 lightdm-gtk-greeter
+bluetui
+blueman

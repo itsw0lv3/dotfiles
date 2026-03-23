@@ -5,7 +5,7 @@
 	"spacing": 4,
 	"modules-left": [
 		"sway/workspaces",
-    "custom/terminal",
+    // "custom/terminal",
     "custom/browser",
     "custom/files",
     "custom/launcher"
@@ -15,9 +15,9 @@
 	],
 	"modules-right": [
 		"tray",
-    //"bluetooth",
     "sway/scratchpad",
-		"network",
+    // "bluetooth",
+		// "network",
 		"pulseaudio",
 		"backlight",
 		"battery",
@@ -62,7 +62,7 @@
   "custom/browser": {
     "format": " ",
     "tooltip-format": "Web Broswer",
-    "on-click": "waterfox"
+    "on-click": "firefox"
   },
   "custom/launcher": {
     "format": " ",
