@@ -4,13 +4,9 @@ gvfs
 gvfs-smb
 tumbler
 tumbler-extra-thumbnailers
-tumbler-folder-thumbnailer
-tumbler-stl-thumbnailer
 thunar-archive-plugin
 xarchiver
 xfce-polkit
-swayfx
-swaybg
 swaync
 swayidle
 swaylock-effects
@@ -19,11 +15,10 @@ libgsf
 grim
 slurp
 wl-clipboard
-wl-clip-hist
+wl-clip-persist
 xclip
-brightnesssctl
+brightnessctl
 clipman
-gnome-keyring
 xdg-desktop-portal
 xdg-desktop-portal-wlr
 fd
@@ -48,3 +43,4 @@ bluetui
 blueman
 qt5-wayland
 qt6-wayland
+waybar
