@@ -1,5 +1,7 @@
+# Imports
 include /etc/sway/config.d/*
 include ~/.config/sway/bar
+
 ### Variables
 
 # Logo key. Use Mod1 for Alt.
@@ -18,18 +20,19 @@ set $menu rofi -show drun
 
 # Autostart:
 exec_always nm-applet & blueman-applet
+exec_always waytrogen -r
 
 ### Output configuration
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/Pictures/Wallpapers/32268-3840x2160-desktop-4k-dune-2021-background-photo.jpg fill
+# output * bg ~/Pictures/Wallpapers/32268-3840x2160-desktop-4k-dune-2021-background-photo.jpg fill
 
 # output eDP-1 disable
 
 # Screen & Laptop
-output eDP-1 resolution 1920x1080 scale 1 position 0,0 
-output HDMI-A-1 resolution 1360x768 scale 1 position 1920,0
+output eDP-1 resolution 1920x1080 scale 1 position 1920,0 
+output HDMI-A-1 resolution 1920x1080 scale 1 position 0,0
 
-workspace 1 output eDP-1
+workspace 1 output HDMI-A-1
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
@@ -61,6 +64,10 @@ bindgesture swipe:right workspace prev
 bindgesture swipe:left workspace next
 
 ### Key bindings
+# Custom binds
+bindsym $mod+e exec thunar
+bindsym $mod+b exec firefox
+bindsym $mod+p exec mousepad .keys
 # Start a terminal
 bindsym $mod+Return exec $term
 
@@ -110,6 +117,7 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
 #
 # Workspaces:
 #
@@ -143,16 +151,16 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+z splith
+bindsym $mod+x splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+s layout toggle split
 
 # Make the current focus fullscreen
-bindsym $mod+f fullscreen
+bindsym $mod+Shift+f fullscreen
 
 # Toggle the current focus between tiling and floating mode
 bindsym $mod+Shift+space floating toggle
@@ -251,4 +259,5 @@ for_window [app_id="thunar" title="Rename *"] floating enable
 for_window [app_id="thunar" title="File Operation Progress"] floating enable
 for_window [app_id="blueman-manager"] floating enable
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
-
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable
+for_window [app_id="org.Waytrogen.Waytrogen"] floating enable

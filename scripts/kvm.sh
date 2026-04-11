@@ -9,7 +9,7 @@ echo "Add these to: /etc/libvirt/libvirtd.conf"
 echo 'unix_sock_group = "libvirt"
 unix_sock_rw_perms = "0770"'
 
-sudo usermod -a -G libvirt $(whoami)
 newgrp libvirt
+sudo usermod -a -G libvirt $(whoami)
 
 sudo systemctl enable libvirtd --now

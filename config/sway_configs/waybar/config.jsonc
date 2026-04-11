@@ -5,7 +5,7 @@
 	"spacing": 4,
 	"modules-left": [
 		"sway/workspaces",
-    // "custom/terminal",
+    "custom/terminal",
     "custom/browser",
     "custom/files",
     "custom/launcher"
@@ -26,9 +26,13 @@
 		"clock"
 	],
 	"backlight": {
-	// "device": "acpi_video1",
-	"format": "{percent}% {icon}",
-	"format-icons": ["", "", "", "", "", "", "", "", ""]
+    "device": "amdgpu_bl2",
+	  "format": "{percent}% {icon}",
+	  "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "reverse-scrolling": true,
+    "smooth-scrolling-threshold": 1
 	},
 	"battery": {
 		"states": {
