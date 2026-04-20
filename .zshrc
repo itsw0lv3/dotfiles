@@ -1,9 +1,10 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="zhann"
+# ZSH_THEME="zhann"
 # ZSH_THEME="trapd00r"
-
+# ZSH_THEME="rgm"
+ZSH_THEME="takashiyoshida"
 plugins=(
 	fzf
 	git
@@ -23,14 +24,13 @@ setopt CORRECT
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias :q=exit
-alias bpy=bpython
-alias docker="sudo docker"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
+
+# Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # tmux autostart
