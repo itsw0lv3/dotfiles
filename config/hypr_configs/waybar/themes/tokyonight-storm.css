@@ -1,0 +1,23 @@
+/* TokyoNight Storm Color Scheme */
+
+/* Background colors - Deep blues and slates */
+@define-color bg_primary #24283b;   /* Main background */
+@define-color bg_secondary #1f2335; /* Darker sidebar/header */
+@define-color bg_tertiary #16161e;  /* Deepest contrast */
+@define-color bg_hover #292e42;     /* Subtle highlight */
+@define-color bg_active #3b4261;    /* Selection/Active state */
+
+/* Foreground colors - Soft whites and silvers */
+@define-color fg_primary #c0caf5;   /* Main text */
+@define-color fg_secondary #a9b1d6; /* Secondary text */
+@define-color fg_tertiary #9aa5ce;  /* Muted text */
+@define-color fg_dim #565f89;       /* Low-contrast/Comments */
+
+/* Accent colors - The iconic neon-pastels */
+@define-color accent_red #f7768e;
+@define-color accent_green #9ece6a;
+@define-color accent_yellow #e0af68;
+@define-color accent_blue #7aa2f7;
+@define-color accent_purple #bb9af7;
+@define-color accent_aqua #7dcfff;
+@define-color accent_orange #ff9e64;

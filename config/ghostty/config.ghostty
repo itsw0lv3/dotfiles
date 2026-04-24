@@ -1,0 +1,15 @@
+# APPERANCE
+font-family = "Hack"
+font-size = 14
+theme = TokyoNight Storm
+background-opacity = 0.8
+
+# KEYBINDS
+keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
+
+# COMMANDS
+command = ~/.tmux-session-control.sh
+
+# CONFIG APP
+confirm-close-surface = false
