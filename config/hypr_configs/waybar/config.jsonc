@@ -1,20 +1,16 @@
 {
 	"layer": "top",
-	"position": "top",
+	"position": "bottom",
 	"height": 30,
 	"spacing": 4,
 	"modules-left": [
-		"hyprland/workspaces",
-    "custom/terminal",
-    "custom/browser",
-    "custom/files",
-    "custom/launcher"
-	],
-	"modules-center": [
+    "custom/launcher",
 		"hyprland/window"
 	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
 	"modules-right": [
-    // "hypr/scratchpad",
     // "bluetooth",
 		// "network",
 		"pulseaudio",
