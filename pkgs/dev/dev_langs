@@ -1,7 +1,11 @@
+go
+rustup
+mono
+gcc
+clang
+python3
+mono
+jdk-openjdk
 nodejs
 npm
 typescript
-mono
-gcc
-go
-rustup
