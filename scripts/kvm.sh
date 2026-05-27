@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-yay -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
+yay -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils ebtables iptables libguestfs
 
 # AMD virtio:
 yay -S vulkan-virtio
