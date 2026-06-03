@@ -1,29 +1,27 @@
 {
 	"layer": "top",
-	"position": "top",
+	"position": "bottom",
 	"height": 30,
 	"spacing": 4,
 	"modules-left": [
-		"sway/workspaces",
     "custom/terminal",
-    "custom/browser",
-    "custom/files",
-    "custom/launcher"
+    "custom/launcher",
+		"hyprland/workspaces"
 	],
 	"modules-center": [
-		"sway/window"
+		"hyprland/window"
 	],
 	"modules-right": [
-		"tray",
-    "sway/scratchpad",
     // "bluetooth",
-		// "network",
+		"network",
 		"pulseaudio",
 		"backlight",
 		"battery",
 		"power-profiles-daemon",
 		"idle_inhibitor",
-		"clock"
+		"tray",
+		"clock",
+    "custom/logout"
 	],
 	"backlight": {
     "device": "amdgpu_bl2",
@@ -55,6 +53,7 @@
   },
 	"clock": {
 	  // "timezone": "America/New_York",
+    "format": "{:%A - %H:%M}",
 	  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	  "format-alt": "{:%Y-%m-%d}"
 	},
@@ -63,47 +62,36 @@
     "tooltip-format": "Terminal",
     "on-click": "kitty"
   },
-  "custom/browser": {
-    "format": " ",
-    "tooltip-format": "Web Broswer",
-    "on-click": "firefox"
-  },
   "custom/launcher": {
     "format": " ",
     "tooltip-format": "App Launcher",
     "on-click": "rofi -show drun"
   },
-  "custom/files": {
-    "format": "",
-    "tooltip-format": "Files",
-    "on-click": "thunar"
+  "custom/logout": {
+    "format": "󰐥 ",
+    "tooltip-format": "Logout",
+    "on-click": "wlogout"
   },
 	"cpu": {
 		"format": "{usage}% ",
 		"tooltip": false
 	},
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-	  "show-empty": false,
-	  "format-icons": ["", ""],
-	  "tooltip": true,
-	  "tooltip-format": "{app}: {title}"
-  }, 
-	"sway/workspaces": {
+	"hyprland/workspaces": {
 		"active-only": false,
-		"persistent-workspaces": {},
+		"persistent-workspaces": {
+    },
 		"disable-scroll": false,
 		"all-outputs": true,
-		"warp-on-scroll": false,
-		// "format": "{name} {icon}",
+		"warp-on-scroll": true,
 		"format": "{name}",
 		"format-icons": {
 	   		 "urgent": "",
 	   		 "focused": "",
 	   		 "default": ""
-		}
+		},
+    "on-click": "activate"
 	},
-	"sway/window": {
+	"hyprland/window": {
 		// "max-length": 30,
 		"max-length": 50,
 		"separate-outputs": true
@@ -119,12 +107,14 @@
 		"format": "{}% "
 	},
 	"network": {
-		"format-wifi": "{essid}: {signalStrength} ",
-		"tooltip-format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits}  \n{gwaddr} - {ipaddr}",
+		// "format-wifi": "{essid}: {signalStrength} ",
+		"format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits} ",
+		// "tooltip-format-wifi": "{bandwidthUpBits}  | {bandwidthDownBits}  \n{gwaddr} - {ipaddr}",
+		"tooltip-format-wifi": "{gwaddr} - {ipaddr}",
 		"tooltip-format-ethernet": "{ifname} {gwaddr} - {ipaddr} ",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰈂"
-		//"format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
+		//  "format-alt": "{bandwidthUpBits}  | {bandwidthDownBits} "
 		// "format-wifi": "({signalStrength}%) ",
 		// "format-ethernet": " {bandwidthDownBytes} - ",
 		// "tooltip-format-wifi": "{essid} {gwaddr} - {ipaddr} ",
@@ -141,22 +131,24 @@
       }
     },
 	"pulseaudio": {
-	"format": "{volume}% {icon}",
-	"format-bluetooth": "{volume}% {icon} {format_source}",
-	"format-bluetooth-muted": " {icon} {format_source}",
-	"format-muted": " {format_source}",
-	// "format-source": "{volume}% ",
-	// "format-source-muted": "",
-	"format-icons": {
-		"headphone": "",
-		"hands-free": "",
-		"headset": "",
-		"phone": "",
-		"portable": "",
-		"car": "",
-		"default": ["", "", ""]
-	},
-	"on-click": "pavucontrol"
+	  "format": "{volume}% {icon}",
+	  "format-bluetooth": "{volume}% {icon} {format_source}",
+	  "format-bluetooth-muted": " {icon} {format_source}",
+	  "format-muted": " {format_source}",
+	  // "format-source": "{volume}% ",
+	  // "format-source-muted": "",
+	  "format-icons": {
+	  	"headphone": "",
+	  	"hands-free": "",
+	  	"headset": "",
+	  	"phone": "",
+	  	"portable": "",
+	  	"car": "",
+	  	"default": ["", "", ""]
+	  },
+    "reverse-scrolling": true,
+    "smooth-scrolling-threshold": 1,
+	  "on-click": "pavucontrol"
 	},
 	"tray": {
 	// "icon-size": 21,

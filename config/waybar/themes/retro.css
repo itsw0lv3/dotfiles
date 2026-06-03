@@ -1,0 +1,23 @@
+/* gruvbox medium dark color scheme */
+
+/* background colors */
+@define-color bg_primary   #1C1C1C;
+@define-color bg_secondary #2A2624;
+@define-color bg_tertiary  #39322F;
+@define-color bg_hover     #4A403C;
+@define-color bg_active    #5D504A;
+
+/* foreground colors */
+@define-color fg_primary #F4EEDB;
+@define-color fg_secondary #E8DFC9;
+@define-color fg_tertiary #F4EEDB;
+@define-color fg_dim #E8DFC9;
+
+/* accent colors */
+@define-color accent_red #B81E2B;
+@define-color accent_green #6E8A3A;
+@define-color accent_yellow #F5B51E;
+@define-color accent_blue #2F5D73;
+@define-color accent_purple #6B4A78;
+@define-color accent_aqua #3F8B85;
+@define-color accent_orange #E77A1F;

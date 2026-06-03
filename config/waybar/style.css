@@ -1,14 +1,14 @@
-@import url("themes/gruvbox.css");
+@import url("themes/retro.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Dejavu Mono;
-    font-weight: bold;
-    font-size: 15px;
+    font-family: Hack;
+    font-size: 14px;
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @bg_primary;
+    opacity: 0.8;
     color: @fg_primary;
     transition-property: background-color;
     transition-duration: .5s;
@@ -21,21 +21,40 @@ window#waybar.hidden {
 /* Module containers */
 .modules-left {
     background: @bg_primary;
-    border-radius: 0 0 10px 0;
     padding: 0 10px;
 }
 
 .modules-center {
     background: @bg_primary;
-    border-radius: 0 0 10px 10px;
     padding: 0 10px;
 }
 
 .modules-right {
     background: @bg_primary;
-    border-radius: 0 0 0 10px;
     padding: 0 10px;
 }
+
+/* Custom Modules */
+#custom-terminal {
+  color: @accent_purple;
+  padding: 0 5px;
+}
+
+#custom-browser {
+  color: @accent_orange;
+  padding: 0 5px;
+}
+
+#custom-files {
+  color: @accent_red;
+  padding: 0 5px;
+}
+
+#custom-launcher {
+  color: @accent_aqua;
+  padding: 0 5px;
+}
+
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -45,26 +64,14 @@ button {
     border-radius: 0;
 }
 
-#bluetooth {
-  padding: 0 8px;
-}
-
-#bluetooth.on:hover {
-  color: @accent_blue;
-}
-
-#bluetooth.off {
-  color: @fg_dim;
-}
-
 /* Hover effects */
 #pulseaudio:hover {
-  color: @accent_yellow;
+    background-color: @bg_hover;
 }
 
 /* Workspaces */
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px;
     background-color: transparent;
     color: @fg_dim;
 }
@@ -74,7 +81,7 @@ button {
 }
 
 #workspaces button.active {
-    color: @accent_orange;
+    color: @accent_aqua;
 }
 
 #workspaces button.urgent {
@@ -180,17 +187,9 @@ label:focus {
     color: @fg_primary;
 }
 
-#backlight:hover {
-  color: @accent_orange;
-}
-
 /* Network states */
 #network {
     color: @fg_primary;
-}
-
-#network:hover {
-  color: @accent_purple;
 }
 
 #network.disconnected {

@@ -18,12 +18,18 @@
 hl.monitor({
     output   = "eDP-1",
     mode     = "1920x1080",
+    position = "1920x0",
+    scale    = "1.0",
+})
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "1920x1080",
     position = "0x0",
     scale    = "1.0",
 })
 
 
----------------------
+--------------------
 ---- MY PROGRAMS ----
 ---------------------
 
@@ -31,7 +37,7 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "thunar"
 local menu        = "rofi -show drun"
-local browser     = "brave"
+local browser     = "firefox"
 
 -------------------
 ---- AUTOSTART ----
@@ -44,7 +50,10 @@ local browser     = "brave"
 --
 hl.on("hyprland.start", function () 
   hl.exec_cmd("nm-applet")
-  hl.exec_cmd("waybar & hyprpaper")
+  hl.exec_cmd("waybar")
+  hl.exec_cmd("waytrogen -r")
+  hl.exec_cmd("hypridle")
+  hl.exec_cmd("blueman-applet")
 end)
 
 
@@ -85,8 +94,8 @@ hl.env("QT_QPA_PLATFORMTHEME", "kde")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 2,
-        gaps_out = 5,
+        gaps_in  = 6,
+        gaps_out = 12,
 
         border_size = 2,
 
@@ -258,15 +267,24 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+for _, key in ipairs({"Q", "RETURN"}) do
+  hl.bind(mainMod .. " + " .. key,
+  hl.dsp.exec_cmd(terminal))
+end
+
 local closeWindowBind = hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())
+
+hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("rofi -show window"))
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 
 -- Move focus with mainMod + arrow keys or Vim
 for _, key in ipairs({"H", "left"}) do
