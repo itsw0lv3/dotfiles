@@ -23,6 +23,7 @@ setopt CORRECT
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias venv="source ./venv/bin/activate"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -35,5 +36,23 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # tmux autostart
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #   exec tmux
+# fi
+
+# Hyprland Run:
+if ! pgrep -f "hyprland" > /dev/null; then
+	dbus-run-session start-hyprland
+fi
+
+# Pipewire run:
+# if ! pgrep -x "pipewire" > /dev/null; then
+# 	pipewire &
+# fi
+# 
+# if ! pgrep -x "pipewire-pulse" > /dev/null; then
+# 	pipewire-pules &
+# fi
+# 
+# if ! pgrep -x "wireplumber" > /dev/null; then
+# 	wireplumber &
 # fi
 
