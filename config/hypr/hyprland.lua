@@ -18,13 +18,13 @@
 hl.monitor({
     output   = "eDP-1",
     mode     = "1920x1080",
-    position = "1920x0",
+    position = "0x0",
     scale    = "1.0",
 })
 hl.monitor({
     output   = "HDMI-A-1",
     mode     = "1920x1080",
-    position = "0x0",
+    position = "1920x0",
     scale    = "1.0",
 })
 
@@ -101,7 +101,7 @@ hl.config({
 
         col = {
             active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            -- inactive_border = "rgba(595959aa)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
