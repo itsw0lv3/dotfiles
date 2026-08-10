@@ -75,6 +75,28 @@ require("lazy").setup({
     }
   },
 
+  -- Notes
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  {
+    "HakonHarnes/img-clip.nvim",
+    lazy = false,
+  },
+
 	-- Pretty
 	{
     'nvim-lualine/lualine.nvim',

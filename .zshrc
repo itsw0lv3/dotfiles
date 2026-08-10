@@ -24,6 +24,7 @@ setopt CORRECT
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias venv="source ./venv/bin/activate"
+alias obsidian="nvim ~/Documents/Personal/Notes"
 
 # Path Exports:
 export PATH=$HOME/.local/bin:$PATH
@@ -40,4 +41,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #   exec tmux
 # fi
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/w0lv3/.lmstudio/bin"
+# End of LM Studio CLI section
 
