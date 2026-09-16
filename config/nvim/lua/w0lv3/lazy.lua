@@ -1,3 +1,4 @@
+-- Lazy Install on Launch
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -14,106 +15,42 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
--- vim.g.maplocalleader = "\\"
-
--- Setup lazy.nvim
 require("lazy").setup({
-	'folke/which-key.nvim',
-	{'folke/neoconf.nvim', cmd = 'Neoconf'},
-  'folke/neodev.nvim',
-
-  -- LSP
-  {	
-    'nvim-telescope/telescope.nvim', 
-    dependencies = {
+  'folke/which-key.nvim', --Keymap helper
+  { 'folke/neoconf.nvim', cmd = 'Neoconf' }, -- Project Configs
+  -- neodev/lazydev removed for now, look at later
+  
+  -- LSP:
+  {
+    'nvim-telescope/telescope.nvim',
+    dependancies = {
       'nvim-lua/plenary.nvim'
     }
   },
   'ThePrimeagen/harpoon',
-  'williamboman/mason.nvim',
-  'williamboman/mason-lspconfig.nvim',
+  'mason-org/mason.nvim',
+  'mason-org/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig',
-  'VonHeikemen/lsp-zero.nvim',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/nvim-cmp',
   'hrsh7th/vim-vsnip',
   'hrsh7th/vim-vsnip-integ',
   'L3MON4D3/LuaSnip',
-
-
-  -- Util
   'mbbill/undotree',
   {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,
     build = ':TSUpdate'
   },
-  {
-    "NeogitOrg/neogit",
-    lazy = true,
-    dependencies = {
-      -- Only one of these is needed.
-      "sindrets/diffview.nvim",        -- optional
-      "esmuellert/codediff.nvim",      -- optional
 
-      -- For a custom log pager
-      "m00qek/baleia.nvim",            -- optional
-
-      -- Only one of these is needed.
-      "nvim-telescope/telescope.nvim", -- optional
-      "ibhagwan/fzf-lua",              -- optional
-      "nvim-mini/mini.pick",           -- optional
-      "folke/snacks.nvim",             -- optional
-    },
-    cmd = "Neogit",
-    keys = {
-      { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" }
-    }
-  },
-
-  -- Notes
+  -- Make Me Pretty!
   {
-    "epwalsh/obsidian.nvim",
-    version = "*",
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-  {
-    "HakonHarnes/img-clip.nvim",
-    lazy = false,
-  },
-
-	-- Pretty
-	{
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
   {
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
-    opts = {},
   },
-  { "zootedb0t/citruszest.nvim" },
-
-  -- Dashboard TESTING:
-  {
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    dependencies = { {'nvim-tree/nvim-web-devicons'}}
-  }
 })

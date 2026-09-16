@@ -1,16 +1,18 @@
-local lsp_zero = require('lsp-zero')
-lsp_zero.on_attach(function(client, bufnr)
-  lsp_zero.default_keymaps({buffer = bufnr})
-  local opts = {buffer = bufnr, remap = false}
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
-  vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
-  vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
-  vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
-end)
+-- LSP-ZERO REPLACE
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('my-lsp-attach', { clear = true }),
+  callback = function(event)
+    local opts = { buffer = event.buf, remap = false }
 
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<leader>vws', vim.lsp.buf.workspace_symbol, opts)
+    vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, opts)
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_next, opts)
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_prev, opts)
+    vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
+  end,
+})
 -- Mason setup
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -42,8 +44,8 @@ cmp.setup({
     end,
   },
   window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert(cmp_mappings),
   sources = cmp.config.sources({
@@ -81,3 +83,4 @@ cmp.setup.cmdline(':', {
 
 -- REMOVED: All the manual lspconfig setup calls below
 -- The Mason handlers above already set up all LSP servers
+
